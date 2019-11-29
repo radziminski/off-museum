@@ -1,0 +1,14 @@
+{
+  "name": "offmuseum",
+  "version": "1.0.0",
+  "description": "Landing page for museum website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss resources/css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

@@ -1,0 +1,21 @@
+.header {
+    background-image: linear-gradient(rgba($color-black, 0.65), rgba($color-black, 0.0)), url(img/bg_blurred.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    &__nav-box {
+        width: 70vw;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__text-box {
+        position: absolute;
+        width: 1140px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
