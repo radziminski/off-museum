@@ -2,6 +2,7 @@
     position: relative;
     margin-left: 10rem;
     margin-top: 2.5rem;
+    
 
     &__photo {
         width: 50%;
@@ -9,10 +10,9 @@
         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
         border-radius: 2px;
         position: absolute;
-        transition: all 0.15s;
+        transition: all 0.20s;
         z-index: 10;
         outline-offset: 1.2rem;
-
         &--p1 {
             left: 0;
             top: -2rem;   
