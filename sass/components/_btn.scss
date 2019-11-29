@@ -82,3 +82,35 @@
         }
     } 
 }
+
+.btn-text {
+    &:link,
+    &:visited {
+        display: inline-block;
+        position: relative;
+
+        padding: 0.3rem 1rem;
+
+        color: $color-primary;
+        border: 1px solid $color-primary;
+        
+
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 2rem;
+        
+        transition: all 0.2s;
+        backface-visibility: hidden;
+    }
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-primary;
+    }
+
+    &:active {
+        transform: translateY(1px);
+        transition: transform 0.1s;
+    }
+}
