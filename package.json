@@ -4,11 +4,13 @@
   "description": "Landing page for museum website",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss resources/css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss resources/css/style.css -w",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0"
   }
 }
