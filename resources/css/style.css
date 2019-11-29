@@ -189,13 +189,13 @@ body {
 .btn-text:link, .btn-text:visited {
   display: inline-block;
   position: relative;
-  padding: 0.3rem 1rem;
+  padding: 0.4rem 1rem;
   color: #BF045B;
   border: 1px solid #BF045B;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.8rem;
   transition: all 0.2s;
   backface-visibility: hidden; }
 
