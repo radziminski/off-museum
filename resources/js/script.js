@@ -11,7 +11,7 @@ img.onload = function() {
     const endTime = new Date();
     const loadTime = endTime - startTime;
     console.log(loadTime);
-    if (loadTime < 1000) {
+    if (loadTime < 600) {
         $('.u-hide').css('transition', 'none');
         $('.loader-box').css('transition', 'none');
     }

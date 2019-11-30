@@ -405,6 +405,36 @@ body {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
+.table--ghost {
+  font-weight: 300;
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2); }
+  .table--ghost td, .table--ghost th {
+    border: 1px solid #ddd;
+    padding: 8px; }
+    .table--ghost td:first-child, .table--ghost th:first-child {
+      padding-right: 8rem; }
+  .table--ghost tr {
+    transition: all 0.08s; }
+    .table--ghost tr:nth-child(even) {
+      background-color: #f2f2f2; }
+    .table--ghost tr:hover {
+      background-color: rgba(191, 4, 91, 0.1);
+      border: 1px solid #BF045B; }
+  .table--ghost th {
+    font-weight: 400;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #BF045B;
+    color: white; }
+  .table--ghost .cell--red {
+    color: red;
+    font-weight: 400; }
+  .table--ghost .cell--highlighted {
+    font-weight: 400; }
+
 .header {
   background-color: #BF045B;
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0)), url(img/bg_blurred.jpg);
