@@ -343,6 +343,7 @@ body {
   position: absolute;
   top: 50%;
   left: 44%;
+  transition: opacity .2s;
   transform: translateY(-100%); }
 
 .loader {

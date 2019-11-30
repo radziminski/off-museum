@@ -14,7 +14,7 @@ img.onload = function() {
     $('.js--animate-1').css('opacity', 1);
     //$('.header__nav').removeClass('u-hide');
     $('.u-hide').css('opacity', 1);
-    $('.loader-box').addClass('u-hide');
+    $('.loader-box').css('opacity', 0);
 }
 img.src = url;
 if (img.complete) img.onload();
