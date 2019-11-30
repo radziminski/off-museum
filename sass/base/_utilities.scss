@@ -18,7 +18,15 @@
     margin-bottom: 5rem;
 }
 
+.u-justified-text {
+    text-align: justify;
+}
+
 .u-hide {
     opacity: 0;
     transition: opacity 0.4s;
+}
+
+.u-padding-left-small {
+    padding-left: 5rem;
 }

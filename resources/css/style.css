@@ -130,11 +130,21 @@ body {
   text-transform: uppercase;
   line-height: 2.8rem;
   backface-visibility: hidden; }
+  .heading-small--sub {
+    font-size: 1.6rem;
+    font-weight: 300;
+    word-spacing: 2px; }
+    .heading-small--sub:hover {
+      color: #D91882; }
 
 .paragraph {
   font-size: 1.8rem;
   text-align: justify;
   font-weight: 300; }
+
+.higlighted-text {
+  font-size: 1.8rem;
+  font-weight: 400; }
 
 .u-centered-text {
   text-align: center; }
@@ -151,9 +161,15 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 5rem; }
 
+.u-justified-text {
+  text-align: justify; }
+
 .u-hide {
   opacity: 0;
   transition: opacity 0.4s; }
+
+.u-padding-left-small {
+  padding-left: 5rem; }
 
 .btn:link, .btn:visited {
   display: inline-block;
@@ -227,6 +243,18 @@ body {
   background-color: #BF045B; }
 
 .btn-text:active {
+  transform: translateY(1px);
+  transition: transform 0.1s; }
+
+.btn-text--blue:link, .btn-text--blue:visited {
+  color: #3a37dd;
+  border: 1px solid #3a37dd; }
+
+.btn-text--blue:hover {
+  color: white;
+  background-color: #3a37dd; }
+
+.btn-text--blue:active {
   transform: translateY(1px);
   transition: transform 0.1s; }
 
@@ -480,11 +508,11 @@ body {
     width: calc((3 * (100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 .section--white {
-  padding: 5rem 0 12rem 0;
+  padding: 5rem 0 11rem 0;
   background-color: white; }
 
 .section--grey {
-  padding: 5rem 0 12rem 0;
+  padding: 5rem 0 11rem 0;
   background-color: #f4f4f4; }
 
 .section-paintings {
@@ -513,8 +541,15 @@ body {
       transform: scale(1.1);
       opacity: 0.8; }
 
+.section-exhibitions .btn-text {
+  margin-top: 2rem;
+  margin-right: 2rem;
+  font-size: 1.6rem;
+  float: right;
+  word-spacing: 0.6rem; }
+
 .section-reviews {
-  padding: 5rem 0 12rem 0;
+  padding: 5rem 0 11rem 0;
   background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/reviews-bg-min.jpg);
   background-size: cover;
   background-position: center;

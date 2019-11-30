@@ -110,4 +110,22 @@
         transform: translateY(1px);
         transition: transform 0.1s;
     }
+
+    &--blue {
+        &:link,
+        &:visited {
+            color: rgb(58, 55, 221);
+            border: 1px solid rgb(58, 55, 221);
+        }
+
+        &:hover {
+            color: $color-white;
+            background-color: rgb(58, 55, 221);
+        }
+
+        &:active {
+            transform: translateY(1px);
+            transition: transform 0.1s;
+        }
+    }
 }

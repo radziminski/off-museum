@@ -45,6 +45,17 @@
         }
     }
 
+    &-exhibitions {
+        .btn-text {
+            margin-top: 2rem;
+            margin-right: 2rem;
+            font-size: 1.6rem;
+            float: right;
+            word-spacing: 0.6rem;
+
+        }
+    }
+
     &-reviews {
         padding: $gutter-section-start 0 $gutter-section-end 0;
         background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/reviews-bg-min.jpg);

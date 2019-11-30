@@ -99,10 +99,25 @@ body {
     text-transform: uppercase;
     line-height: 2.8rem;
     backface-visibility: hidden;
+
+    &--sub {
+        font-size: 1.6rem;
+        font-weight: 300;
+        word-spacing: 2px;
+
+        &:hover {
+            color: $color-primary-light;
+        }
+    }
 }
 
 .paragraph {
     font-size: 1.8rem;
     text-align: justify;
     font-weight: 300;
+}
+
+.higlighted-text {
+    font-size: 1.8rem;
+    font-weight: 400;
 }
