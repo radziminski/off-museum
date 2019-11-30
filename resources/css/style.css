@@ -92,6 +92,10 @@ body {
     width: 20%;
     height: 2px;
     border-bottom: 2px solid #BF045B; }
+  .heading-section--white {
+    color: white; }
+    .heading-section--white:after {
+      border-bottom: 2px solid white; }
 
 .heading-column {
   margin-bottom: 1rem;
@@ -275,6 +279,28 @@ body {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
 
+.card-box {
+  width: 100%;
+  height: 40rem;
+  background-color: white;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.15); }
+  .card-box__title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+    padding: 1.5rem 2.5rem; }
+    .card-box__title:after {
+      content: "";
+      display: block;
+      width: 40%;
+      margin: 0.5rem auto;
+      height: 2px;
+      background-color: #BF045B; }
+  .card-box__paragraph {
+    padding: 0.5rem 2.5rem; }
+
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0)), url(img/bg_blurred.jpg);
   background-attachment: fixed;
@@ -318,36 +344,47 @@ body {
   .row .col-3-of-4 {
     width: calc((3 * (100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
-.section {
-  min-height: 10rem; }
-  .section--white {
-    padding: 5rem 0 12rem 0;
-    background-color: white; }
-  .section--grey {
-    padding: 5rem 0 12rem 0;
-    background-color: #f4f4f4; }
-  .section-paintings {
-    width: 100vw;
-    display: block; }
-    .section-paintings::after {
-      content: "";
-      display: table;
-      clear: both; }
-    .section-paintings__photo-box {
-      background-color: #1f001b;
-      display: block;
-      width: 25%;
-      height: 30rem;
-      margin: 0;
-      padding: 0;
-      float: left;
-      overflow: hidden; }
-    .section-paintings__photo {
-      opacity: 0.65;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: all 0.5s; }
-      .section-paintings__photo:hover {
-        transform: scale(1.1);
-        opacity: 0.8; }
+.section--white {
+  padding: 5rem 0 12rem 0;
+  background-color: white; }
+
+.section--grey {
+  padding: 5rem 0 12rem 0;
+  background-color: #f4f4f4; }
+
+.section-paintings {
+  width: 100vw;
+  display: block; }
+  .section-paintings::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .section-paintings__photo-box {
+    background-color: #1f001b;
+    display: block;
+    width: 25%;
+    height: 30rem;
+    margin: 0;
+    padding: 0;
+    float: left;
+    overflow: hidden; }
+  .section-paintings__photo {
+    opacity: 0.65;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s; }
+    .section-paintings__photo:hover {
+      transform: scale(1.1);
+      opacity: 0.8; }
+
+.section-reviews {
+  padding: 5rem 0 12rem 0;
+  background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/reviews-bg-min.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  background-attachment: fixed; }
+
+.footer {
+  background-color: #333; }

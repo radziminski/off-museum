@@ -1,5 +1,4 @@
 .section {
-    min-height: 10rem;
     
     &--white {
         padding: $gutter-section-start 0 $gutter-section-end 0;
@@ -45,5 +44,18 @@
             }
         }
     }
+
+    &-reviews {
+        padding: $gutter-section-start 0 $gutter-section-end 0;
+        background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/reviews-bg-min.jpg);
+        background-size: cover;
+        background-position: center;
+        color: white;
+        background-attachment: fixed;
+    }
+
 }
 
+.footer {
+    background-color: $color-grey-dark;
+}

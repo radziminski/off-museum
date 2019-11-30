@@ -69,6 +69,13 @@ body {
         
         border-bottom: 2px solid $color-primary;
     }
+
+    &--white {
+        color: $color-white;
+        &:after {
+            border-bottom: 2px solid $color-white;
+        }
+    }
 }
 
 .heading-column {
