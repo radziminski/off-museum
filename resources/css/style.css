@@ -208,13 +208,16 @@ body {
   transition: all .4s; }
 
 .btn--full {
-  margin-right: 2rem;
+  margin: 1rem auto;
+  text-decoration: none;
   color: white;
-  background-color: #D91882;
-  border: 1px solid #28b485; }
+  background-color: #BF045B; }
   .btn--full:hover, .btn--full:active {
-    color: white;
-    border: 1px solid #BF045B; }
+    color: #BF045B;
+    background-color: white;
+    border: 1px solid #BF045B;
+    transform: none;
+    box-shadow: none; }
 
 .btn--ghost {
   margin-right: 2rem;
@@ -333,23 +336,40 @@ body {
 
 .card-box {
   width: 100%;
-  height: 40rem;
   background-color: white;
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.15); }
+  .card-box__title-box {
+    background-image: linear-gradient(to right, #bf045b, #d91882);
+    width: 100%; }
   .card-box__title {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
-    color: #333;
+    color: white;
     padding: 1.5rem 2.5rem; }
     .card-box__title:after {
       content: "";
       display: block;
-      width: 40%;
+      width: 50%;
       margin: 0.5rem auto;
-      height: 2px;
-      background-color: #BF045B; }
+      height: 1px;
+      background-image: linear-gradient(90deg, transparent, #fff, transparent); }
+  .card-box__price-box {
+    background-image: linear-gradient(to right bottom, rgba(191, 4, 91, 0.9), rgba(217, 24, 130, 0.9));
+    width: 100%; }
+  .card-box__price {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    padding: 1rem 2.5rem;
+    letter-spacing: 2px; }
+    .card-box__price .less-imp {
+      font-weight: 300;
+      color: #f4f4f4;
+      text-transform: lowercase; }
   .card-box__paragraph {
     padding: 0.5rem 2.5rem; }
 
@@ -547,6 +567,12 @@ body {
   font-size: 1.6rem;
   float: right;
   word-spacing: 0.6rem; }
+
+.section-membership .btn {
+  padding: 0.8rem 2rem;
+  font-size: 1.6rem;
+  display: block;
+  text-align: center; }
 
 .section-reviews {
   padding: 5rem 0 11rem 0;
