@@ -5,12 +5,12 @@
 .animateLeft {
     animation: moveInLeft 0.8s ease-out;
     animation-fill-mode: backwards;
-    animation-delay: 0.1s;
+    animation-delay: calc($animations-delay + 0.1s);
 }
 .animateRight {
     animation: moveInRight 0.8s ease-out;
     animation-fill-mode: backwards;
-    animation-delay: 0.15s;
+    animation-delay: calc($animations-delay + 11)s;
 }
 .animateBottom {
     animation: moveInBottom 0.8s ease-out;
