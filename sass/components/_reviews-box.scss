@@ -1,0 +1,16 @@
+.reviews-box {
+    @include clearfix;
+    margin-bottom: 10rem;
+    
+   &__photo-box {
+        width: 20rem;
+        height: 20rem;
+        overflow: hidden;
+   }    
+
+   &__photo {
+        width: 100%;
+        object-fit: cover;
+
+   }
+}

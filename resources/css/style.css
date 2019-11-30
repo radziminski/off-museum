@@ -248,6 +248,14 @@ body {
       border-bottom: 2px solid #BF045B;
       color: white; }
 
+.sticky-nav {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #333; }
+
 .composition {
   position: relative;
   margin-left: 10rem;
@@ -300,6 +308,20 @@ body {
       background-color: #BF045B; }
   .card-box__paragraph {
     padding: 0.5rem 2.5rem; }
+
+.reviews-box {
+  margin-bottom: 10rem; }
+  .reviews-box::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .reviews-box__photo-box {
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden; }
+  .reviews-box__photo {
+    width: 100%;
+    object-fit: cover; }
 
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0)), url(img/bg_blurred.jpg);
