@@ -1,7 +1,13 @@
+var src = $('header').css('background-image');
 
-window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-});
+urlSrc = src.slice(56, src.length);
+var url = urlSrc.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+var img = new Image();
+img.onload = function() {
+    console.log('image loaded')
+}
+img.src = url;
+if (img.complete) img.onload();
 
 $(document).ready(function() {
     console.log('hello');

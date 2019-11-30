@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.4.1",
+    "jquery.waitforimages": "^2.4.0",
     "node-sass": "^4.13.0"
-  }
+  },
+  "devDependencies": {}
 }
