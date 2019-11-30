@@ -12,6 +12,7 @@ img.onload = function() {
     $('.heading-primary--sub').css('opacity', 1);
     $('.js--animate-1').addClass('animateBottom');
     $('.js--animate-1').css('opacity', 1);
+    $('.header__nav').removeClass('u-hide');
 }
 img.src = url;
 if (img.complete) img.onload();

@@ -151,6 +151,9 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 5rem; }
 
+.u-hide {
+  opacity: 0; }
+
 .btn:link, .btn:visited {
   display: inline-block;
   position: relative;
