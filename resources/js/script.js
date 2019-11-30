@@ -1,11 +1,20 @@
 
 // Waiting for background Image
-var src = $('header').css('background-image');
+const src = $('header').css('background-image');
 urlSrc = src.slice(56, src.length);
-var url = urlSrc.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
-var img = new Image();
+const url = urlSrc.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+const img = new Image();
+const startTime = new Date();
+
 img.onload = function() {
     console.log('loadeda')
+    const endTime = new Date();
+    const loadTime = endTime - startTime;
+    if (loadTime < 1000) {
+        $('.u-hide').css('transition', 'none');
+        $('.loader-box').css('transition', 'none');
+    }
+
     $('.heading-primary--main').addClass('animateLeft');
     $('.heading-primary--main').css('opacity', 1);
     $('.heading-primary--sub').addClass('animateRight');
