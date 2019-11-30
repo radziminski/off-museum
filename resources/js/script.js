@@ -6,6 +6,7 @@ urlSrc = src.slice(56, src.length);
 var url = urlSrc.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
 var img = new Image();
 img.onload = function() {
+    console.log('loaded')
     $('heading-primary--main').addClass('animateLeft');
     $('heading-primary--sub').addClass('animateRight');
     $('js--animate-1').addClass('animateBottom');
