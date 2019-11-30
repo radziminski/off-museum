@@ -15,9 +15,7 @@
         transition: all 0.2s;
         backface-visibility: hidden;
 
-        animation: moveInBottom 0.8s ease-out;
-        animation-fill-mode: backwards;
-        animation-delay: 0.8s;
+        
     }
 
     &:hover {

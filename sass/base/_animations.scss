@@ -1,3 +1,19 @@
+.animateLeft {
+    animation: moveInLeft 0.8s ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: 0.1s;
+}
+.animateRight {
+    animation: moveInRight 0.8s ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: 0.15s;
+}
+.animateBottom {
+    animation: moveInBottom 0.8s ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: 0.4s;
+}
+
 
 @keyframes moveInLeft {
     0% {
