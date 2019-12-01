@@ -578,6 +578,7 @@ body {
 
 .section-paintings {
   width: 100vw;
+  max-width: 100%;
   display: block; }
   .section-paintings::after {
     content: "";
