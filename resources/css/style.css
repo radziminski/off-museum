@@ -337,9 +337,12 @@ body {
 .card-box {
   width: 100%;
   background-color: white;
-  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.15);
+  transition: all 0.2s; }
   .card-box__title-box {
+    padding-bottom: 1rem;
     background-image: linear-gradient(to right, #bf045b, #d91882);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     width: 100%; }
   .card-box__title {
     font-size: 2.2rem;
@@ -356,7 +359,9 @@ body {
       height: 1px;
       background-image: linear-gradient(90deg, transparent, #fff, transparent); }
   .card-box__price-box {
-    background-image: linear-gradient(to right bottom, rgba(191, 4, 91, 0.9), rgba(217, 24, 130, 0.9));
+    background-color: #9e034b;
+    margin-top: -2rem;
+    padding-top: 2rem;
     width: 100%; }
   .card-box__price {
     font-size: 2rem;
@@ -370,8 +375,44 @@ body {
       font-weight: 300;
       color: #f4f4f4;
       text-transform: lowercase; }
-  .card-box__paragraph {
-    padding: 0.5rem 2.5rem; }
+  .card-box__features {
+    text-decoration: none;
+    font-size: 1.9rem; }
+    .card-box__features li {
+      display: block;
+      padding: 1.4rem 2rem;
+      text-align: center;
+      transition: background-color 0.2s; }
+      .card-box__features li:nth-child(even) {
+        background-color: #f2f2f2; }
+      .card-box__features li:last-child {
+        padding-bottom: 1.5rem; }
+      .card-box__features li:hover {
+        background-color: rgba(217, 24, 130, 0.1);
+        border-left: 2px solid #BF045B; }
+  .card-box__button:link, .card-box__button:visited {
+    display: block;
+    position: relative;
+    padding: 1.2rem 0;
+    background-color: #BF045B;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2rem;
+    transition: all 0.2s;
+    backface-visibility: hidden; }
+  .card-box__button:hover {
+    background-color: #D91882;
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.2); }
+  .card-box__button:active {
+    transform: translateY(-0.15rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s; }
+  .card-box:hover {
+    box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-1rem); }
 
 .reviews-box {
   margin-bottom: 10rem; }
@@ -388,7 +429,7 @@ body {
     object-fit: cover; }
 
 .loader-box {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 44%;
   transition: opacity .2s;
