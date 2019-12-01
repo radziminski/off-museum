@@ -103,6 +103,7 @@
         }
     
         &:hover {   
+            transform: scale(1.01);
             background-color: $color-primary-light;
             box-shadow: 0 0.8rem 2rem rgba($color-black, 0.2);
             //border: 1px solid $color-primary;
@@ -111,7 +112,7 @@
         }
     
         &:active {
-            transform: translateY(-0.15rem);
+            transform: translateY(0.15rem);
             box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
             transition: transform 0.1s;
         }

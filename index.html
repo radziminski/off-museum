@@ -237,19 +237,16 @@
             </div>
             <div class="row">
                 <div class="reviews-box">
-                    <div class="col-1-of-4">
-                        <i class="ion-ios-arrow-dropleft"></i>
-                    </div>
-                    <div class="col-2-of-4">
+                    <i class="ion-ios-arrow-dropleft reviews-box__icon"></i>
+                    <div class="reviews-box__content">
+
                         <div class="reviews-box__photo-box">
-                            <img src="resources/img/art_1-min.jpg" class="reviews-box__photo">
+                            <img src="resources/img/face_1-min.jpg" class="reviews-box__photo">
                         </div>
                         <span class="reviews-box__text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum rerum, ratione atque neque labore iste tempora doloremque eum quos voluptas dicta officiis a error magnam delectus amet aliquid sint minima. </span>
+                        
                     </div>
-                    <div class="col-1-of-4">
-                        <i class="ion-ios-arrow-dropright"></i>
-                    </div>
-                    
+                    <i class="ion-ios-arrow-dropright reviews-box__icon"></i>
                 </div>
             </div>
         </section>
@@ -326,12 +323,32 @@
             <div class="row u-centered-text">
                 <h2 class="heading-section">Contact us!</h2>
             </div>
+            <form class="contact-form">
+                <input type="text" class="contact-form__input-text" placeholder="Your Name">
+                <input type="text" class="contact-form__input-text" placeholder="Your Email">
+                <input type="text" class="contact-form__input-text" placeholder="Your Message">
+                <a href="#" class="btn-text">Send!</a>
+            </form>
 
         </section>
 
-        <section class="footer">
-            <h2>Created by Jan Radziminski 2019</h2>
-        </section>
+        <footer class="footer">
+            <div class="row">
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">About Us</a></li>
+                    <li><a href="#" class="footer__link">Exhibitions</a></li>
+                    <li><a href="#" class="footer__link">Memberships</a></li>
+                    <li><a href="#" class="footer__link">Reviews</a></li>
+                    <li><a href="#" class="footer__link">Prices & Open Hours</a></li>
+                    <li><a href="#" class="footer__link">Contact Us</a></li>
+                </ul>
+                
+            </div>
+            <div class="row">
+                <p class="footer__author">Created by Jan Radziminski 2019</p>
+                </div>
+                
+        </footer>
 
         </main>
 

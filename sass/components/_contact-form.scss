@@ -1,0 +1,17 @@
+.contact-form {
+    width: 85rem;
+    padding: 2rem 4rem;
+    margin: 0 auto;
+    background-color: $color-white;
+    box-shadow: 0 2rem 3rem rgba($color-black, 0.08);
+
+    &__input-text {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgb(139, 139, 139);
+        padding: 1rem;
+        margin-bottom: 5rem;
+
+        
+    }
+}
