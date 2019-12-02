@@ -1,72 +1,29 @@
 
 .btn {
-    &:link,
-    &:visited {
-        display: inline-block;
-        position: relative;
+    display: inline-block;
+    position: relative;
 
-        padding: 1.2rem 3rem;
+    padding: 1.2rem 3rem;
 
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 300;
-        font-size: 2rem;
-        
-        transition: all 0.2s;
-        backface-visibility: hidden;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 2rem;
+    
+    transition: all 0.2s;
+    backface-visibility: hidden;
 
-        
-    }
-
-    &:hover {
-        transform: translateY(-0.4rem);
-
-        background-color: $color-white;
-        box-shadow: 0 0.8rem 2rem rgba($color-black, 0.2);
-        
-        &::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
-    }
-
-    &:active {
-        transform: translateY(-0.15rem);
-        box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
-        transition: transform 0.1s;
-    }
-
-    &::after {
-        content: "";
-        display: inline-block;
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-
-        border-radius: 10rem;
-        
-        z-index: -1;
-        transition: all .4s;
-    }
 
     &--full {
-        margin: 1rem auto;
-
         text-decoration: none;
         color: $color-white;
         background-color: $color-primary;
+        padding: .5rem 3rem;
         
         &:hover, 
         &:active {
-            color: $color-primary;
-            background-color: $color-white;
-            border: 1px solid $color-primary;
+            transform: scale(1.1);;
 
-            transform: none;
-            box-shadow: none;
         }
     }
 
@@ -77,10 +34,16 @@
         border: 1px solid $color-white;
         background-color: transparent;
 
-        &:hover, 
-        &:active {
+        &:hover {
+            transform: translateY(-0.4rem);
             color: $color-primary-light;
             border: 1px solid $color-white;
+            background-color: $color-white;
+            box-shadow: 0 0.8rem 2rem rgba($color-black, 0.2);
+        }
+
+        &:active {
+            transform: translateY(-0.15rem);
         }
     } 
 }
@@ -130,6 +93,7 @@
         &:active {
             transform: translateY(1px);
             transition: transform 0.1s;
+            
         }
     }
 }

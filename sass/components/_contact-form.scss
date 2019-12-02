@@ -4,14 +4,52 @@
     margin: 0 auto;
     background-color: $color-white;
     box-shadow: 0 2rem 3rem rgba($color-black, 0.08);
+    
 
     &__input-text {
+        
+        color: $color-grey;
         width: 100%;
         border: none;
-        border-bottom: 1px solid rgb(139, 139, 139);
-        padding: 1rem;
-        margin-bottom: 5rem;
+        border-bottom: 1px solid rgb(190, 190, 190);
+        padding: 1rem 0;
+        margin-bottom: 2.2rem;
+        outline: none;
 
+        &:focus {
+            border-bottom: 2px solid $color-primary;
+        }
+
+        &::placeholder {
+            color: rgb(190, 190, 190);
+        }
         
+    }
+
+    &__input-messege {
+        color: $color-grey;
+        height: 10rem;
+        width: 100%;
+        resize: none;
+        border: none;
+        border-bottom: 1px solid rgb(190, 190, 190);
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        outline: none;
+
+        &:focus {
+            border-bottom: 2px solid $color-primary;
+        }
+
+        &::placeholder {
+            color: rgb(190, 190, 190);
+        }
+    }
+
+    text-align: center;
+    
+    &__btn {
+        width: 21rem;
+        margin-bottom: 2rem;
     }
 }
