@@ -1,10 +1,12 @@
 .reviews-box {
 	@include clearfix;
     margin-bottom: 10rem;
-    width: 100rem;
+    max-width: 100rem;
 	margin: 0 auto;
 	text-align: center;
 	vertical-align: middle;
+
+	
      
 	&__icon {
 		margin-top: -19rem;
@@ -16,10 +18,12 @@
 
 		&:first-child {
 			margin-right: 8rem;
+			margin-right: 8%;
 		}
 
 		&:last-child {
 			margin-left: 8rem;
+			margin-left: 8%;
 		}
 
 		
@@ -34,7 +38,9 @@
 		overflow: hidden;
 		border-radius: 50%;
 		position: relative;
-		float: left
+		float: left;
+		
+		
     }    
 
     &__photo {
@@ -52,7 +58,7 @@
 	&__text {
 		padding: 2.2rem 0 2.2rem 3rem;
 		text-align: justify;
-		width: 50rem;
+		width: 48rem;
 		float: right;
 	}
 }

@@ -58,6 +58,9 @@
         
         text-decoration: none;
         font-size: 1.9rem;
+        @include respond (tab-land) {
+            font-size: 1.6rem;
+        }
         
         li {
             display: block;

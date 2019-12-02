@@ -3,6 +3,10 @@
     &--white {
         padding: $gutter-section-start 0 $gutter-section-end 0;
         background-color: $color-white;
+
+        @include respond(tab-land) {
+            padding: 3.5rem 0 8rem 0;
+        }
     }
 
     &--grey {
@@ -27,6 +31,10 @@
             padding: 0;
             float: left;
             overflow: hidden;
+
+            @include respond(tab-land) {
+                height: 20rem;
+            }
         }
 
         &__photo {
@@ -47,6 +55,7 @@
     }
 
     &-exhibitions {
+        font-size: 1.8rem;;
         .btn-text {
             margin-top: 2rem;
             margin-right: 2rem;
@@ -82,7 +91,7 @@
     background-color: $color-grey-dark;
 
     &__links {
-        width: 110rem;
+        width: 60%;
         list-style: none;
         margin: 2rem 0;
         display: block;

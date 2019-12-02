@@ -1,6 +1,6 @@
 .composition {
     position: relative;
-    margin-left: 10rem;
+    margin-left: 6rem;
     margin-top: 2.5rem;
     
 
@@ -14,18 +14,19 @@
         z-index: 10;
         outline-offset: 1.2rem;
         &--p1 {
+            width: 48%;
             left: 0;
             top: -2rem;   
             
         }
         &--p2 {
-            width: 60%;
-            left: 20%;
-            top: 5rem;   
+            width: 57%;
+            left: 15%;
+            top: 5.5rem;   
         }
         &--p3 {
-            width: 55%;
-            left: 60%;
+            width: 48%;
+            left: 52%;
             top: 2rem;   
         }
 

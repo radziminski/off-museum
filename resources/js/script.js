@@ -28,3 +28,6 @@ img.onload = function() {
 }
 img.src = url;
 if (img.complete) img.onload();
+setTimeout(() => {
+    $('.loader-box').css('display', 'none');
+}, 50);

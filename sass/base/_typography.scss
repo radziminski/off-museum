@@ -11,7 +11,6 @@ body {
 
 .heading-primary {
     margin-top: 0;
-    margin-bottom: 2rem;
     word-spacing: 4px;
     letter-spacing: 2px;
     
@@ -20,11 +19,13 @@ body {
     backface-visibility: hidden;
     margin-bottom: 6rem;
 
+    font-size: 5rem;
+
     &--main {
         display: block;
         opacity: 0;
 
-        font-size: 5.5rem;
+        font-size: 110%;
         font-weight: 300;
         letter-spacing: 0.5rem;
         animation-fill-mode: backwards;
@@ -34,11 +35,14 @@ body {
     &--sub {
         opacity: 0;
         display: block;
-        font-size: 2rem;
+        font-size: 40%;
         font-weight: 200;
         letter-spacing: 1rem;
-        
-        
+    
+    }
+
+    @include respond(tab-land) {
+        font-size: 4.2rem;
     }
 }
 
@@ -101,7 +105,7 @@ body {
     backface-visibility: hidden;
 
     &--sub {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: 300;
         word-spacing: 2px;
 
@@ -120,4 +124,6 @@ body {
 .higlighted-text {
     font-size: 1.8rem;
     font-weight: 400;
+
+   
 }

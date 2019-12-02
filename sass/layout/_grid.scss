@@ -9,6 +9,13 @@
 
     @include clearfix;
 
+    @include respond(tab-land) {
+        padding: 0 4rem;
+    }
+
+    
+
+
     [class^="col-"] {
         float: left;
         

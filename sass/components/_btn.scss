@@ -45,6 +45,10 @@
         &:active {
             transform: translateY(-0.15rem);
         }
+
+        @include respond(tab-land) {
+            font-size: 1.8rem;
+        }
     } 
 }
 
