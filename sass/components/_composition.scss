@@ -2,7 +2,7 @@
     position: relative;
     margin-left: 6rem;
     margin-top: 2.5rem;
-    
+
 
     &__photo {
         width: 50%;
@@ -41,5 +41,63 @@
 
     &:hover &__photo:not(:hover) {
         transform: scale(0.95);
+    }
+
+    @include respond(tab-port) {
+        width: 90%;
+        margin: 0 auto;
+        &__photo {
+            position: relative;
+            display: inline-block;
+        
+            &--p1 {
+                height: 30rem;
+                width: 30%;   
+                left: 0;
+                top: 0;  
+                object-fit: cover;
+            }
+            &--p2 {
+                height: 30rem;
+                width: 30%;
+                left: 0;
+                top: 0;   
+                object-fit: cover; 
+            }
+            &--p3 {
+                height: 30rem;
+                width: 30%; 
+                left: 0;
+                top: 0;   
+                object-fit: cover;  
+                text-align: right;
+            }
+            &:not(:last-child) {
+                margin-right: 4%;
+            }
+         }
+    }
+
+    @include respond(small-phone) {
+        &__photo {
+
+            &--p1 {
+                height: 10rem;
+            }
+            &--p2 {
+                height: 10rem;
+            }
+            &--p3 {
+                height: 10rem;
+            }
+            &:not(:last-child) {
+                margin-right: 3%;
+            }
+
+            &:hover {
+                outline: 0 solid transparent;
+                transform: scale(1.7) translateY(-0.5rem);
+            }
+        }
     }
 }

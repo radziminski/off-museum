@@ -7,11 +7,37 @@
         @include respond(tab-land) {
             padding: 3.5rem 0 8rem 0;
         }
+        @include respond(tab-port) {
+            padding: 3rem 0 6rem 0;
+        }
+
+        
     }
 
     &--grey {
         padding: $gutter-section-start 0 $gutter-section-end 0;
         background-color: $color-grey-light;
+
+        @include respond(tab-land) {
+            padding: 3.5rem 0 8rem 0;
+        }
+        @include respond(tab-port) {
+            padding: 3rem 0 6rem 0;
+        }
+
+    }
+
+    &-about {
+        .btn-text {
+            margin-bottom: 5rem;
+
+            @include respond(tab-port) {
+                margin-bottom: 0;
+            }
+        }
+
+        
+        
     }
 
     &-paintings {
@@ -34,6 +60,9 @@
 
             @include respond(tab-land) {
                 height: 20rem;
+            }
+            @include respond(tab-port) {
+                height: 15rem;
             }
         }
 
@@ -83,6 +112,20 @@
         color: white;
         background-attachment: fixed;
         
+        @include respond(tab-land) {
+            padding: 3.5rem 0 8rem 0;
+        }
+        @include respond(tab-port) {
+            padding: 3rem 0 6rem 0;
+        }
+    }
+
+    &-prices {
+        @include respond (small-phone) {
+            .row {
+                padding: 0 1.5rem;
+            }
+        }
     }
 
 }

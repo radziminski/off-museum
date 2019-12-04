@@ -17,12 +17,10 @@
 		cursor: pointer;
 
 		&:first-child {
-			margin-right: 8rem;
 			margin-right: 8%;
 		}
 
 		&:last-child {
-			margin-left: 8rem;
 			margin-left: 8%;
 		}
 
@@ -61,4 +59,71 @@
 		width: 48rem;
 		float: right;
 	}
+
+	@include respond (tab-port) {
+
+		&__icon {
+			margin-top: -25rem;
+			display: inline-block;
+			font-size: 4rem;
+
+			&:first-child {
+				margin-right: 5%;
+			}
+	
+			&:last-child {
+				margin-left: 5%;
+			}
+		}
+
+		&__content {
+			width: 70%;
+			text-align: justify;
+		}
+
+		&__photo-box {
+			width: 15rem;
+			height: 15rem;
+			display: block;
+			float: unset;
+			margin: 0 auto 1rem auto;
+		}    
+	
+		&__photo {
+			top: -1rem;
+		}
+		
+		&__text {
+			padding: 2.2rem 0 2.2rem 0;
+			
+			width: 100%;
+			float: unset;
+		}
+	}
+
+	@include respond (small-phone) {
+		&__icon {
+			margin-top: -35rem;
+			font-size: 3.5rem;
+		}
+
+		&__content {
+			width: 65%;
+			text-align: justify;
+			font-size: 1.7rem;
+			line-height: 2.8rem;
+		}
+
+		&__photo-box {
+			width: 12rem;
+			height: 12rem;
+		}    
+	
+		&__photo {
+			top: -1.8rem;
+			left: -1px;
+		}
+		
+	}
+
 }

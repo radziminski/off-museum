@@ -12,7 +12,6 @@ body {
 .heading-primary {
     margin-top: 0;
     word-spacing: 4px;
-    letter-spacing: 2px;
     
     color: $color-white;
     text-transform: uppercase;
@@ -43,6 +42,22 @@ body {
 
     @include respond(tab-land) {
         font-size: 4.2rem;
+    }
+
+    @include respond(tab-port) {
+        margin-bottom: 3rem;
+        &--main {
+            letter-spacing: 1px;
+        }
+        &--sub {
+            font-size: 50%;
+            letter-spacing: 3px;
+        }
+        
+    }
+
+    @include respond(small-phone) {
+        font-size: 3rem;
     }
 }
 
@@ -79,6 +94,31 @@ body {
             border-bottom: 2px solid $color-white;
         }
     }
+
+    @include respond(phone) {
+        font-size: 3.2rem;
+        font-weight: 400;
+        word-spacing: 4px;
+        line-height: 3.8rem;
+        &:after {
+            margin-top: 0.8rem;
+            width: 30%;
+        }
+    }
+
+
+    @include respond(small-phone) {
+        
+        font-size: 2.8rem;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        line-height: 3.8rem;
+        &:after {
+            margin-top: 0.5rem;
+            width: 40%;
+        }
+    }
+
 }
 
 .heading-column {
@@ -119,6 +159,10 @@ body {
     font-size: 1.8rem;
     text-align: justify;
     font-weight: 300;
+
+    @include respond (small-phone) {
+        line-height: 3.2rem;
+    }
 }
 
 .higlighted-text {

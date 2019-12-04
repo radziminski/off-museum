@@ -2,9 +2,6 @@
     background-color: $color-primary;
     background-image: linear-gradient(rgba($color-black, 0.65), rgba($color-black, 0.0)), url(img/bg_blurred.jpg);
     background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -31,6 +28,8 @@
         @include respond(small-deskt) {
             width: 80%;
         }
+
+        
     }
 
     
