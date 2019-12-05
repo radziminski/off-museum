@@ -781,13 +781,22 @@ body {
 .header {
   height: 100vh;
   background-color: #BF045B;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0)), url(img/bg_blurred.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0)), url(img/bg_blurred_deskt.jpg);
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
+  @media (max-width: 90em) {
+    .header {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0)), url(img/bg_blurred_small_deskt.jpg); } }
+  @media (max-width: 37.5em) {
+    .header {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0)), url(img/bg_blurred_mobile.jpg); } }
+  @media (min-width: 140em) {
+    .header {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0)), url(img/bg_blurred_4k.jpg); } }
   @media (max-width: 75em) {
     .header {
       background-attachment: scroll; } }
