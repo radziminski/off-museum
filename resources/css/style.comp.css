@@ -208,6 +208,11 @@ body {
   font-size: 1.8rem;
   font-weight: 400; }
 
+.link {
+  text-decoration: none;
+  font-weight: 400;
+  color: #BF045B; }
+
 .u-centered-text {
   text-align: center; }
 

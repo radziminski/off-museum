@@ -153,7 +153,10 @@ body {
         &:hover {
             color: $color-primary-light;
         }
+
     }
+
+    
 }
 
 .paragraph {
@@ -171,4 +174,15 @@ body {
     font-weight: 400;
 
    
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 400;
+    color: $color-primary;
+    transition: all 0.2s;
+    &:hover {
+        color: $color-secondary;
+    }
+
 }

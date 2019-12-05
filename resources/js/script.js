@@ -35,3 +35,14 @@ if (img.complete && DOMLoadFlag) img.onload();
 setTimeout(() => {
     $('.loader-box').css('display', 'none');
 }, 50);
+
+
+
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+    var target = $($.attr(this, 'href')).offset().top - 70;
+    console.log(target)
+    $('html, body').animate({
+        scrollTop: target,
+    }, 500);
+});

@@ -27,10 +27,10 @@
                     <span class="logo">OFF <i class="ion-md-qr-scanner logo-icon"></i> Museum</span>
 
                     <ul class="nav js--main-nav">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#exh">Exhibitions</a></li>
-                        <li><a href="#tour">Off Tour</a></li>
-                        <li><a href="#prices">Prices</a></li>
+                        <li><a href="#section-about">About</a></li>
+                        <li><a href="#section-exhibitions">Exhibitions</a></li>
+                        <li><a href="#section-prices">Prices</a></li>
+                        <li><a href="#section-contact">Contact</a></li>
                     </ul>
                 </div>
 
@@ -42,14 +42,14 @@
                     <span class="heading-primary--sub">In Your new favourite art museum</span>
                 </h1>
 
-                <a class="btn btn--ghost js--animate-1" href="#">Learn more</a>
-                <a class="btn btn--ghost js--animate-1" href="#">Discover new works</a>
-                <a class="btn btn--ghost js--animate-1" href="#">Prices & Opening Hours</a>
+                <a class="btn btn--ghost js--animate-1" href="#section-about">Learn more</a>
+                <a class="btn btn--ghost js--animate-1" href="#section-exhibitions">Discover new works</a>
+                <a class="btn btn--ghost js--animate-1" href="#section-prices">Prices & Opening Hours</a>
             </div>
         </header>
 
         <main class="u-hide"> 
-        <section class="section-about section--white ">
+        <section class="section-about section--white" id="section-about">
             <div class="row u-centered-text">
                 <h2 class="heading-section">About Us</h2>
             </div>
@@ -126,7 +126,7 @@
 
         </section>
 
-        <section class="section-exhibitions section--white">
+        <section class="section-exhibitions section--white" id="section-exhibitions">
             <div class="row u-centered-text">
                 <h2 class="heading-section">Latest Exhibitions</h2>
             </div>
@@ -162,7 +162,7 @@
             
         </section>
 
-        <section class="section-membership section--grey">
+        <section class="section-membership section--grey" id="section-membership">
             <div class="row">
                 <h2 class="heading-section u-centered-text">Membership plans</h2>
                 <p class="paragraph u-centered-text u-margin-bottom-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eum porro cupiditate harum laudantium illum molestiae, vitae sed tenetur saepe cum facilis voluptatum perspiciatis sunt unde inventore totam animi quidem.</p>
@@ -236,7 +236,7 @@
             </div>
         </section>
 
-        <section class="section-reviews">
+        <section class="section-reviews" id="section-reviews">
             <div class="row u-centered-text">
                 <h2 class="heading-section heading-section--white">Visitors reviews</h2>
             </div>
@@ -256,7 +256,7 @@
             </div>
         </section>
 
-        <section class="section-prices section--white">
+        <section class="section-prices section--white" id="section-prices">
             <div class="row u-centered-text">
                 <h2 class="heading-section">Prices and opening hours</h2>
             </div>
@@ -324,9 +324,14 @@
             </div>
         </section>
 
-        <section class="section-contact-form section--grey">
+        <section class="section-contact-form section--grey" id="section-contact">
             <div class="row u-centered-text">
-                <h2 class="heading-section">Contact us!</h2>
+                <h2 class="heading-section">Contact</h2>
+                <p class="paragraph u-centered-text u-margin-bottom-medium">
+                    You can find as at: <a href="https://goo.gl/maps/mYfdT1jGkoQxxxmv5"  target="_blank" class="link">Aleje Jerozolimskie 32</a>, in Warsaw, Poland.
+                    <br>If You have any questions contact us via form below,
+                    or call: +48 123 345 567.
+                </p>
             </div>
             <form class="contact-form">
                 <label></label>
