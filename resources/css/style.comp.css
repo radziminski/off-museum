@@ -782,7 +782,6 @@ body {
   background-attachment: fixed; }
   @media (max-width: 75em) {
     .header {
-      width: 80vw;
       background-attachment: scroll; } }
   .header__nav-box {
     width: 70vw;
