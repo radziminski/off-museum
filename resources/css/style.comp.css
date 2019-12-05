@@ -31,6 +31,31 @@
   animation-fill-mode: backwards;
   animation-delay: 0.4s; }
 
+@keyframes fadeIn {
+  0% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
+
+@keyframes fadeInOp {
+  0% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 0.75; } }
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1; }
+  99% {
+    opacity: 0; }
+  100% {
+    display: none; } }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -211,7 +236,10 @@ body {
 .link {
   text-decoration: none;
   font-weight: 400;
-  color: #BF045B; }
+  color: #BF045B;
+  transition: all 0.2s; }
+  .link:hover {
+    color: #3a37dd; }
 
 .u-centered-text {
   text-align: center; }
@@ -717,9 +745,6 @@ body {
         font-size: 1.5rem; }
         .table--ghost td:first-child, .table--ghost th:first-child {
           padding-right: 8px; } }
-    .table--ghost td:hover, .table--ghost th:hover {
-      font-size: 2rem;
-      font-weight: 400; }
   .table--ghost tr {
     transition: all 0.08s; }
     .table--ghost tr:nth-child(even) {
@@ -727,8 +752,7 @@ body {
     .table--ghost tr:nth-child(6) {
       border-bottom: 2px solid #cfcfcf; }
     .table--ghost tr:hover {
-      background-color: rgba(191, 4, 91, 0.1);
-      border: 1px solid #BF045B; }
+      background-color: rgba(191, 4, 91, 0.1); }
   .table--ghost th {
     font-weight: 400;
     padding-top: 12px;
@@ -782,6 +806,123 @@ body {
   .contact-form__btn {
     width: 21rem;
     margin-bottom: 2rem; }
+
+.pop-up-nav__icon {
+  position: fixed;
+  left: 85%;
+  top: 5%;
+  z-index: 999;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  animation: fadeInOp 0.3s;
+  background-color: #BF045B;
+  transition: all 0.2s;
+  cursor: pointer;
+  opacity: 0.75; }
+  .pop-up-nav__icon .rect {
+    position: absolute;
+    width: 59%;
+    height: 4px;
+    background-color: white;
+    opacity: 1;
+    transition: all 0.2s; }
+    .pop-up-nav__icon .rect:nth-child(1) {
+      top: 29%;
+      left: 21.5%; }
+    .pop-up-nav__icon .rect:nth-child(2) {
+      top: 47%;
+      left: 21.5%; }
+    .pop-up-nav__icon .rect:nth-child(3) {
+      top: 66%;
+      left: 21.5%; }
+  .pop-up-nav__icon:hover {
+    opacity: 1; }
+  .pop-up-nav__icon--active .rect {
+    position: absolute;
+    width: 59%;
+    height: 4px;
+    background-color: white;
+    opacity: 1;
+    transition: all 0.2s; }
+    .pop-up-nav__icon--active .rect:nth-child(1) {
+      top: 47%;
+      left: 20%;
+      transform: rotate(45deg); }
+    .pop-up-nav__icon--active .rect:nth-child(3) {
+      top: 47%;
+      left: 20%;
+      transform: rotate(-45deg); }
+    .pop-up-nav__icon--active .rect:nth-child(2) {
+      opacity: 0; }
+  @media (max-width: 56.25em) {
+    .pop-up-nav__icon {
+      left: 85%;
+      top: 2.5rem; } }
+  @media (max-width: 37.5em) {
+    .pop-up-nav__icon {
+      left: 80%;
+      top: 4%;
+      animation: fadeInOp 0.3s 0.9s;
+      animation-fill-mode: backwards;
+      width: 5rem;
+      height: 5rem; } }
+
+.pop-up-nav__cover {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 900;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s;
+  animation: fadeIn 0.3s;
+  animation-fill-mode: forwards; }
+
+.pop-up-nav__links {
+  display: inherit;
+  width: 35rem;
+  height: 50rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  .pop-up-nav__links a {
+    display: block;
+    background-color: white;
+    color: #555;
+    font-weight: 400;
+    font-size: 2.1rem;
+    text-decoration: none;
+    padding: 2rem 1rem;
+    transition: all 0.2s; }
+    .pop-up-nav__links a:nth-child(odd) {
+      background-color: #eeeeee; }
+    .pop-up-nav__links a:hover {
+      background-color: #BF045B;
+      color: white;
+      transform: scale(1.05); }
+  @media (max-width: 37.5em) {
+    .pop-up-nav__links {
+      top: 58%; } }
+  @media (max-height: 30em) {
+    .pop-up-nav__links {
+      height: 40rem; }
+      .pop-up-nav__links a {
+        padding: 1rem 1rem; } }
+
+.pop-up-nav__logo {
+  display: block;
+  background-image: linear-gradient(to right bottom, #bf045b, rgba(191, 4, 91, 0.7));
+  padding: 2rem 1rem;
+  color: white;
+  font-weight: 700;
+  font-size: 2.6rem;
+  letter-spacing: 2px; }
 
 .header {
   height: 100vh;

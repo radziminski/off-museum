@@ -46,3 +46,61 @@ $(document).on('click', 'a[href^="#"]', function (event) {
         scrollTop: target,
     }, 500);
 });
+
+const elements = {
+    body: $('body'),
+    popUpNavIcon: $('.pop-up-nav__icon'),
+    popUpNavCover: $('.pop-up-nav__cover'),
+    popUpNavLinks: $('.pop-up-nav__links'),
+}
+
+console.log(elements)
+
+elements.popUpNavIcon.on('click', () => {
+    elements.popUpNavIcon.toggleClass('pop-up-nav__icon--active');
+    if (elements.popUpNavCover.css('opacity') > 0) {
+        elements.popUpNavCover.css({'display': 'none', 'opacity' : 0});
+
+    } else {
+        elements.popUpNavCover.css({'display': 'block', 'opacity' : 1});
+
+    };
+});
+
+elements.popUpNavCover.on('click', () => {
+    elements.popUpNavCover.css({'display': 'none', 'opacity' : 0});
+
+    elements.popUpNavIcon.toggleClass('pop-up-nav__icon--active');
+});
+
+if (window.innerWidth >= 900) {
+    if (window.scrollY < 500) elements.popUpNavIcon.css({'display': 'none'});
+    window.addEventListener("scroll",() => { 
+        if (window.scrollY > 500) {
+            elements.popUpNavIcon.css({'display': 'block'});
+        } else {
+            elements.popUpNavIcon.css({'display': 'none'});
+        }
+    }, false);
+} else {
+    if (window.scrollY < 200) elements.popUpNavIcon.css({'background-color': 'transparent'});
+    window.addEventListener("scroll",() => { 
+        if (window.scrollY > 200) {
+            elements.popUpNavIcon.css({'background-color': '#BF045B'});
+        } else {
+            elements.popUpNavIcon.css({'background-color': 'transparent'});
+        }
+    }, false);
+}
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 900) {
+        if (window.scrollY < 500) elements.popUpNavIcon.css({'display': 'none'});
+        else elements.popUpNavIcon.css({'display': 'block'});
+    } else {
+        elements.popUpNavIcon.css({'display': 'block'});
+        if (window.scrollY < 200) elements.popUpNavIcon.css({'background-color': 'transparent'});
+        else elements.popUpNavIcon.css({'background-color': '#BF045B'});
+    }
+})
+

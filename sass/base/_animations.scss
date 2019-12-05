@@ -18,6 +18,43 @@
     animation-delay: 0.4s;
 }
 
+@keyframes fadeIn {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOp {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 0.75;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        display: block;
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+    100% {
+        display: none;
+    }
+}
 
 @keyframes moveInLeft {
     0% {
