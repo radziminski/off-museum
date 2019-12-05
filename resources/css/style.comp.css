@@ -124,9 +124,10 @@ body {
       .heading-primary--sub {
         font-size: 50%;
         letter-spacing: 3px; } }
-  @media (max-width: 30em) {
+  @media (max-width: 37.5em) {
     .heading-primary {
-      font-size: 3rem; } }
+      font-size: 3rem;
+      line-height: 1.3; } }
 
 .heading-section {
   display: block;
@@ -524,13 +525,9 @@ body {
       font-size: 1.8rem; }
       .card-box__features {
         font-size: 100%; } }
-  @media (max-width: 56.25em) {
+  @media (max-width: 37.5em) {
     .card-box {
-      max-width: 56rem;
-      margin: 0 auto;
-      font-size: 1.8rem; }
-      .card-box__features {
-        font-size: 100%; } }
+      max-width: 40rem; } }
 
 .reviews-box {
   margin-bottom: 10rem;
@@ -600,14 +597,18 @@ body {
       padding: 2.2rem 0 2.2rem 0;
       width: 100%;
       float: unset; } }
-  @media (max-width: 30em) {
+  @media (max-width: 37.5em) {
     .reviews-box__icon {
-      margin-top: -35rem;
+      margin-top: -20rem;
       font-size: 3.5rem; }
+      .reviews-box__icon:first-child {
+        margin-right: 8%; }
+      .reviews-box__icon:last-child {
+        margin-left: 8%; }
     .reviews-box__content {
-      width: 65%;
+      width: 60%;
       text-align: justify;
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       line-height: 2.8rem; }
     .reviews-box__photo-box {
       width: 12rem;
@@ -615,6 +616,10 @@ body {
     .reviews-box__photo {
       top: -1.8rem;
       left: -1px; } }
+  @media (max-width: 30em) {
+    .reviews-box__icon {
+      margin-top: -30rem;
+      font-size: 3.5rem; } }
 
 .loader-box {
   position: fixed;
@@ -698,6 +703,9 @@ body {
         padding-right: 4rem; }
       .table--ghost td:nth-child(2), .table--ghost th:nth-child(2) {
         width: 25%; } }
+    @media (max-width: 37.5em) {
+      .table--ghost td, .table--ghost th {
+        font-size: 1.7rem; } }
     @media (max-width: 30em) {
       .table--ghost td, .table--ghost th {
         padding: 4px;
@@ -799,6 +807,12 @@ body {
     @media (max-width: 90em) {
       .header__text-box {
         width: 80%; } }
+    @media (max-width: 37.5em) {
+      .header__text-box {
+        top: 52%; } }
+    @media (max-width: 30em) {
+      .header__text-box {
+        top: 50%; } }
 
 .row {
   max-width: 114rem;

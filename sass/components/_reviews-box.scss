@@ -101,16 +101,23 @@
 		}
 	}
 
-	@include respond (small-phone) {
+	@include respond (phone) {
 		&__icon {
-			margin-top: -35rem;
+			margin-top: -20rem;
 			font-size: 3.5rem;
+			&:first-child {
+				margin-right: 8%;
+			}
+	
+			&:last-child {
+				margin-left: 8%;
+			}
 		}
 
 		&__content {
-			width: 65%;
+			width: 60%;
 			text-align: justify;
-			font-size: 1.7rem;
+			font-size: 1.8rem;
 			line-height: 2.8rem;
 		}
 
@@ -124,6 +131,13 @@
 			left: -1px;
 		}
 		
+	}
+
+	@include respond (small-phone) {
+		&__icon {
+			margin-top: -30rem;
+			font-size: 3.5rem;
+		}
 	}
 
 }

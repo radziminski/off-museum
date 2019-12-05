@@ -137,14 +137,8 @@
             font-size: 100%;
         }
     }
-    @include respond(tab-port) {
-        max-width: 56rem;
-        margin: 0 auto;
-        font-size: 1.8rem;
-
-        &__features {
-            font-size: 100%;
-        }
+    @include respond(phone) {
+        max-width: 40rem;
     }
 
     

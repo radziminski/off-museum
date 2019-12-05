@@ -31,8 +31,16 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        @include respond(small-deskt) {
+        @include respond(small-deskt) {   
             width: 80%;
+        }
+
+        @include respond(phone) {
+            top: 52%;
+        }
+
+        @include respond(small-phone) {
+            top: 50%;
         }
 
         
