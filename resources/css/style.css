@@ -912,7 +912,7 @@ body {
 
 .section-reviews {
   padding: 5rem 0 11rem 0;
-  background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/reviews-bg-min.jpg);
+  background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/bg_blurred.jpg);
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
