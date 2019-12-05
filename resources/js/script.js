@@ -5,7 +5,8 @@ let urlSrc = src.slice(56, src.length);
 const url = urlSrc.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
 const img = new Image();
 const startTime = new Date();
-
+let DOMLoadFlag = false;
+let imageLoadFlag = false;
 img.onload = function() {
     const endTime = new Date();
     const loadTime = endTime - startTime;
@@ -25,7 +26,12 @@ img.onload = function() {
     $('.loader-box').css('opacity', 0);
 }
 img.src = url;
-if (img.complete) img.onload();
+window.addEventListener('DOMContentLoaded', (event) => {
+    DOMLoadFlag = true;
+});
+
+if (img.complete && DOMLoadFlag) img.onload();
+
 setTimeout(() => {
     $('.loader-box').css('display', 'none');
 }, 50);

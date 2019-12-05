@@ -2,15 +2,7 @@
     height: 100vh;
     background-color: $color-primary;
     background-image: linear-gradient(rgba($color-black, 0.65), rgba($color-black, 0.0)), url(img/bg_blurred_deskt.jpg);
-    @include respond(small-deskt) {
-        background-image: linear-gradient(rgba($color-black, 0.65), rgba($color-black, 0.0)), url(img/bg_blurred_small_deskt.jpg);
-    }
-    @include respond(phone) {
-        background-image: linear-gradient(rgba($color-black, 0.65), rgba($color-black, 0.0)), url(img/bg_blurred_mobile.jpg);
-    }
-    @include respond(big-deskt) {
-        background-image: linear-gradient(rgba($color-black, 0.65), rgba($color-black, 0.0)), url(img/bg_blurred_4k.jpg);
-    }
+    
     -o-background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size:cover;
@@ -18,10 +10,22 @@
     background-position: center;
     background-attachment: fixed;
     
-
+    @include respond(small-deskt) {
+        background-image: linear-gradient(rgba($color-black, 0.65), rgba($color-black, 0.0)), url(img/bg_blurred_small_deskt.jpg);
+    }
+    
     @include respond(tab-land) {
         background-attachment: scroll;
     }
+
+    @include respond(phone) {
+        background-image: linear-gradient(rgba($color-black, 0.65), rgba($color-black, 0.0)), url(img/bg_blurred_mobile.jpg);
+    }
+    @include respond(big-deskt) {
+        background-image: linear-gradient(rgba($color-black, 0.65), rgba($color-black, 0.0)), url(img/bg_blurred_4k.jpg);
+    }
+
+   
 
     &__nav-box {
         width: 70vw;

@@ -379,9 +379,9 @@ body {
       left: 0;
       top: -2rem; }
     .composition__photo--p2 {
-      width: 57%;
+      width: 48%;
       left: 15%;
-      top: 5.5rem; }
+      top: 6.5rem; }
     .composition__photo--p3 {
       width: 48%;
       left: 52%;
@@ -791,15 +791,15 @@ body {
   @media (max-width: 90em) {
     .header {
       background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0)), url(img/bg_blurred_small_deskt.jpg); } }
+  @media (max-width: 75em) {
+    .header {
+      background-attachment: scroll; } }
   @media (max-width: 37.5em) {
     .header {
       background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0)), url(img/bg_blurred_mobile.jpg); } }
   @media (min-width: 140em) {
     .header {
       background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0)), url(img/bg_blurred_4k.jpg); } }
-  @media (max-width: 75em) {
-    .header {
-      background-attachment: scroll; } }
   .header__nav-box {
     width: 70vw;
     display: block;
@@ -937,7 +937,7 @@ body {
 
 .section-reviews {
   padding: 5rem 0 11rem 0;
-  background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/reviews-bg-min.jpg);
+  background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/reviews_bg_min_deskt.jpg);
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
@@ -951,6 +951,7 @@ body {
       background-attachment: scroll; } }
   @media (max-width: 56.25em) {
     .section-reviews {
+      background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/reviews_bg_min_mobile.jpg);
       padding: 3rem 0 6rem 0; } }
 
 @media (max-width: 30em) {
