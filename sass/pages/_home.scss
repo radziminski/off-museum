@@ -106,8 +106,7 @@
 
     &-reviews {
         padding: $gutter-section-start 0 $gutter-section-end 0;
-        //background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/reviews-bg-min.jpg);
-        background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/bg_blurred.jpg);
+        background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/reviews-bg-min.jpg);
         -o-background-size: cover;
         -moz-background-size: cover;
         -webkit-background-size:cover;
@@ -118,6 +117,7 @@
         
         @include respond(tab-land) {
             padding: 3.5rem 0 8rem 0;
+            background-attachment: scroll;
         }
         @include respond(tab-port) {
             padding: 3rem 0 6rem 0;

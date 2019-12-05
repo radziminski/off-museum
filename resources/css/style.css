@@ -780,7 +780,8 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-attachment: scroll; }
   .header__nav-box {
     width: 70vw;
     display: block;
@@ -912,7 +913,7 @@ body {
 
 .section-reviews {
   padding: 5rem 0 11rem 0;
-  background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/bg_blurred.jpg);
+  background-image: linear-gradient(rgba(36, 0, 29, 0.7), rgba(34, 0, 29, 0.7)), url(img/reviews-bg-min.jpg);
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
@@ -922,7 +923,8 @@ body {
   background-attachment: fixed; }
   @media (max-width: 75em) {
     .section-reviews {
-      padding: 3.5rem 0 8rem 0; } }
+      padding: 3.5rem 0 8rem 0;
+      background-attachment: scroll; } }
   @media (max-width: 56.25em) {
     .section-reviews {
       padding: 3rem 0 6rem 0; } }
