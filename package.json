@@ -8,7 +8,8 @@
     "compile:sass": "node-sass sass/main.scss resources/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" resources/css/style.comp.css -o resources/css/style.prefix.css",
     "compress:css": "node-sass resources/css/style.prefix.css resources/css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "compile:js": "babel ./source/ -d ./resources/js/"
   },
   "author": "Janek Radzimiński",
   "license": "ISC",
