@@ -1,7 +1,9 @@
-
+let urlSrc;
 // Waiting for background Image
 const src = $('header').css('background-image');
-urlSrc = src.slice(56, src.length);
+//urlSrc = src.slice(56, src.length);
+urlSrc = src;
+console.log(urlSrc)
 const url = urlSrc.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
 const img = new Image();
 const startTime = new Date();
