@@ -17,6 +17,10 @@
     animation-fill-mode: backwards;
     animation-delay: 0.4s;
 }
+.animateMoveOutLeft {
+    animation: moveOutLeft 0.6s ease-out;
+    animation-fill-mode: forwards;
+}
 
 @keyframes fadeIn {
     0% {
@@ -97,5 +101,17 @@
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes moveOutLeft {
+    0% {
+        transform: none;
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-10rem);
+        opacity: 0;
     }
 }

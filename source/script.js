@@ -9,6 +9,9 @@ const elements = {
     btnAnimation: $('.js--animate-1'),
     hidden: $('.u-hide'),
     loader: $('.loader-box'),
+    reviewsButtonLeft: $('.js--reviews-left'),
+    reviewsButtonRight: $('.js--reviews-right'),
+    reviewsBox: $('.reviews-box__content'),
 
 }
 
@@ -81,6 +84,11 @@ elements.popUpNavCover.on('click', () => {
 
     elements.popUpNavIcon.toggleClass('pop-up-nav__icon--active');
 });
+
+elements.reviewsButtonLeft.on('click', () => {
+    elements.reviewsBox.addClass('animateMoveOutLeft');
+    
+})
 
 if (window.innerWidth >= 900) {
     if (window.scrollY < 500) elements.popUpNavIcon.css({'display': 'none'});
