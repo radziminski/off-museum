@@ -5,6 +5,7 @@ import $ from 'jquery';
 
 const elements = {
     body: $('body'),
+    header: $('.header'),
     popUpNavIcon: $('.pop-up-nav__icon'),
     popUpNavCover: $('.pop-up-nav__cover'),
     popUpNavLinks: $('.pop-up-nav__links'),
@@ -53,7 +54,12 @@ img.onload = function() {
     elements.btnAnimation.css('opacity', 1);
     elements.hidden.css('opacity', 1);
     elements.loader.css('opacity', 0);
-    
+    $('body').css('visibility', 'visible');
+
+}
+
+function js_Load() {
+    $('body').css('visibility', 'visible')
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
