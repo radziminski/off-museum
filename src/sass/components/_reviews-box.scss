@@ -1,0 +1,171 @@
+.reviews-box {
+	@include clearfix;
+    margin-bottom: 10rem;
+    max-width: 100rem;
+	margin: 0 auto;
+	text-align: center;
+	vertical-align: middle;
+
+	
+     
+	&__icon {
+		margin-top: -19rem;
+		display: inline-block;
+		font-size: 5rem;
+		vertical-align: middle;
+		transform: scale(1);
+		cursor: pointer;
+
+		&:first-child {
+			margin-right: 8%;
+		}
+
+		&:last-child {
+			margin-left: 8%;
+		}
+
+		
+		
+	}
+	&__content {
+		display: inline-block;
+		transition: opacity 0.8s;
+		opacity: 1;
+	}
+	&__photo-box {
+		width: 20rem;
+		height: 20rem;
+		overflow: hidden;
+		border-radius: 50%;
+		position: relative;
+		float: left;
+		
+		
+    }    
+
+    &__photo {
+		position: absolute;
+		top: 1rem;
+		left: 0;
+		width: 100%;
+		height: 20rem;
+		padding-left: 0.8rem;
+		transform: scale(1.1);
+        object-fit: cover;
+
+	}
+	
+	&__text {
+		padding: 2.2rem 0 2.2rem 3rem;
+		text-align: justify;
+		width: 48rem;
+		float: right;
+	}
+
+	@include respond (tab-port) {
+
+		&__icon {
+			margin-top: -25rem;
+			display: inline-block;
+			font-size: 4rem;
+
+			&:first-child {
+				margin-right: 5%;
+			}
+	
+			&:last-child {
+				margin-left: 5%;
+			}
+		}
+
+		&__content {
+			width: 70%;
+			text-align: justify;
+		}
+
+		&__photo-box {
+			width: 15rem;
+			height: 15rem;
+			display: block;
+			float: unset;
+			margin: 0 auto 1rem auto;
+		}    
+	
+		&__photo {
+			top: -1rem;
+		}
+		
+		&__text {
+			padding: 2.2rem 0 2.2rem 0;
+			
+			width: 100%;
+			float: unset;
+		}
+	}
+
+	@include respond (phone) {
+		&__icon {
+			margin-top: -20rem;
+			font-size: 3.5rem;
+			&:first-child {
+				margin-right: 8%;
+			}
+	
+			&:last-child {
+				margin-left: 8%;
+			}
+		}
+
+		&__content {
+			width: 60%;
+			text-align: justify;
+			font-size: 1.8rem;
+			line-height: 2.8rem;
+		}
+
+		&__photo-box {
+			width: 12rem;
+			height: 12rem;
+		}    
+	
+		&__photo {
+			top: -1.8rem;
+			left: -1px;
+		}
+		
+	}
+
+	@include respond (small-phone) {
+		&__icon {
+			margin-top: -30rem;
+			font-size: 3.5rem;
+		}
+	}
+
+}
+
+.review-2 {
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 20rem;
+		padding-left: 0;
+		transform: scale(1.0);
+        object-fit: cover;
+	}
+}
+
+.review-3 {
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 20rem;
+		padding-left: 0;
+		transform: scale(1.0);
+        object-fit: cover;
+	}
+}

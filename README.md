@@ -1,6 +1,4 @@
-# OffMuseum
-OFF Museum ia a landing page for imaginary modern art museum.
-Website can be previed at: https://radziminski.github.io/OffMuseum/ 
+# Sortify
+Web application visualizing different sorting algorithms.
 
-Project was created only with usage of HTML5 and CSS3 (with SASS preprocessor). 
-
+Built using vanilla Javascript, HTML ans CSS with SASS preprocessor. 

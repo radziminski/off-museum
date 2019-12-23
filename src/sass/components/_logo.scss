@@ -1,0 +1,33 @@
+.logo {
+    display: inline-block;
+    padding: 3rem 0;
+    font-weight: 900;
+    font-size: 3.6rem;
+
+    transition: color 0.2s;
+    color:  white;
+    margin: 0;
+    letter-spacing: 3px;
+
+    @include respond (phone) {
+        font-size: 2.8rem;
+        letter-spacing: 2.5px;
+    }
+    
+}
+
+.logo-icon {
+    font-weight: 900;
+    text-transform: none;
+    display: inline-block;
+    
+}
+
+.logo-icon ion-icon { 
+    padding: 0;
+    display: inline-block;
+    margin-bottom: -0.5rem;
+    @include respond (phone) {
+        margin-bottom: -0.3rem;
+    }
+}
