@@ -81,7 +81,9 @@ if (img.complete && DOMLoadFlag) {
 // Function allowing 'Smooth scrolling' when link is clicked
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
-    const target = $($.attr(this, 'href')).offset().top - 100;
+    let target = $($.attr(this, 'href')).offset().top - 100;
+    if (window.innerWidth < 1200) target = $($.attr(this, 'href')).offset().top - 50;
+    if (window.innerWidth < 900) target = $($.attr(this, 'href')).offset().top;
     $('html, body').animate({
         scrollTop: target,
     }, 500);
