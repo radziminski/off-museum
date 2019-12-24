@@ -54,7 +54,7 @@ img.onload = function() {
     elements.btnAnimation.css('opacity', 1);
     elements.hidden.css('opacity', 1);
     elements.loader.css('opacity', 0);
-    $('body').css('visibility', 'visible');
+    $('.hide-wrapper').css('visibility', 'visible');
 
 }
 

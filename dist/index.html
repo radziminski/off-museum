@@ -15,12 +15,13 @@
         <title>OFF Museum</title>
     </head>
 
-    <body style="visibility: hidden;" onload="js_Load()">
+    <body>
         <!-- === HEADER === -->                                                              <!-- === HEADER === -->
         <div class="loader-box">
             <div class="loader">Loading...</div>
         </div>
         
+        <div style="visibility: hidden;" onload="js_Load()" class="hide-wrapper">
         <header class="header u-hide">
             <nav class="header__nav u-hide">
                 <div class="header__nav-box">
@@ -382,6 +383,7 @@
             </footer>
     
             </main>
+        </div>
     
 
         <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
