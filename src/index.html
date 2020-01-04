@@ -21,9 +21,9 @@
             <div class="loader">Loading...</div>
         </div>
         
-        <div style="visibility: hidden;" onload="js_Load()" class="hide-wrapper">
-        <header class="header u-hide">
-            <nav class="header__nav u-hide">
+        <div style="visibility: hidden; opacity: 0;" class="js--wrapper">
+        <header class="header">
+            <nav class="header__nav">
                 <div class="header__nav-box">
                     <span class="logo">OFF <i class="logo-icon"><ion-icon name="md-qr-scanner"></ion-icon></i> Museum</span>
 
@@ -49,7 +49,7 @@
             </div>
         </header>
 
-        <div class="pop-up-nav u-hide">
+        <div class="pop-up-nav">
             <div class="pop-up-nav__icon">
                 <div class="rect"></div>
                 <div class="rect"></div>
@@ -66,7 +66,7 @@
             </div>
         </div>
 
-        <main class="u-hide"> 
+        <main class="main"> 
             <section class="section-about section--white" id="section-about">
                 <div class="row u-centered-text">
                     <h2 class="heading-section">About Us</h2>
@@ -242,15 +242,31 @@
                         <i class="reviews-box__icon js--reviews-left">
                             <ion-icon name="ios-arrow-dropleft"></ion-icon>
                         </i>
-                            <div class="reviews-box__content review-1 js--review-1">
-        
-                                <div class="reviews-box__photo-box">
-                                    <img src="img/face_1-min.jpg" class="reviews-box__photo">
+                            <div class="reviews-box__content-box">
+                                
+                                <div class="reviews-box__content js--review-1">
+                                    <div class="reviews-box__photo-box">
+                                        <img src="img/face_1-min.jpg" class="reviews-box__photo">
+                                    </div>
+                                    <span class="reviews-box__text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum rerum, ratione atque neque labore iste tempora doloremque eum quos voluptas dicta officiis a error magnam delectus amet aliquid sint minima. </span>
                                 </div>
-                                <span class="reviews-box__text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum rerum, ratione atque neque labore iste tempora doloremque eum quos voluptas dicta officiis a error magnam delectus amet aliquid sint minima. </span>
+
+                                <div class="reviews-box__content js--review-2">
+                                    <div class="reviews-box__photo-box">
+                                        <img src="img/face_2-min.jpg" class="reviews-box__photo">
+                                    </div>
+                                    <span class="reviews-box__text"> Lorem ipsum dolor sit, aisicing elit. Ipsum rerum, ratione atque neque labore iste tempora doloremque eum quos voluptas dicta officiis a error magnam delectus amet aliquid sint minima. </span>
+                                </div>
+
+                                <div class="reviews-box__content js--review-3">
+                                    <div class="reviews-box__photo-box">
+                                        <img src="img/face_3-min.jpg" class="reviews-box__photo">
+                                    </div>
+                                    <span class="reviews-box__text">sit, amet consectetur adipisicing elit. Ipsum rerum, ratione atque neque labore iste tempora doloremque eum quos voluptas dicta officiis a error magnam delectus amet aliquid sint minima. </span>
+                                </div>
                                 
                             </div>
-                            <div class="reviews-box__content review-2 js--review-2">
+                            <!-- <div class="reviews-box__content review-2 js--review-2">
         
                                 <div class="reviews-box__photo-box">
                                     <img src="img/face_2-min.jpg" class="reviews-box__photo">
@@ -265,7 +281,7 @@
                                 </div>
                                 <span class="reviews-box__text"> adipisicing elit. Ipsum rerum, ratione atque neque labore iste tempora doloremque eum quos voluptas dicta officiis a error magnam delectus amet aliquid sint minima. </span>
                                 
-                            </div>
+                            </div> -->
                         <i class="reviews-box__icon js--reviews-right">
                             <ion-icon name="ios-arrow-dropright"></ion-icon>
                         </i>
@@ -361,7 +377,8 @@
                 </form>
     
             </section>
-    
+            </main>
+
             <footer class="footer">
                 <div class="row">
                     <ul class="footer__links">
@@ -379,8 +396,6 @@
                     </div>
                     
             </footer>
-    
-            </main>
         </div>
     
 

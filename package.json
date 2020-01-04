@@ -7,7 +7,9 @@
     "deploy": "gh-pages -d dist",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development --open",
+    "git:update": "git add . && git commit -m \"bugs fixed\" && git push",
+    "full-deploy": "npm run build && npm run git:update && npm run deploy"
   },
   "author": "Jan Radzimiński",
   "license": "ISC",
@@ -15,6 +17,7 @@
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
+    "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.0",
     "file-loader": "^5.0.2",
@@ -22,6 +25,7 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.1.1",
     "url-loader": "^3.0.0",
@@ -33,5 +37,15 @@
     "@babel/polyfill": "^7.7.0",
     "animate.css": "^3.7.2",
     "jquery": "^3.4.1"
-  }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "last 2 version",
+    "not dead",
+    "iOS >= 9"
+  ]
 }
