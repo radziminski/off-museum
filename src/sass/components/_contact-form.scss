@@ -12,12 +12,12 @@
         color: $color-grey;
         width: 100%;
         border: none;
-        border-bottom: 1px solid rgb(190, 190, 190);
+        border-bottom: 2px solid rgba(190, 190, 190, 0.5);
         padding: 1rem 0;
         margin-bottom: 2.2rem;
         outline: none;
         font-size: 2rem;
-
+        transition: border-bottom 0.2s;
         &:focus {
             border-bottom: 2px solid $color-primary;
         }
