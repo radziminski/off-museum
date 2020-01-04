@@ -1,4 +1,2 @@
-# Sortify
-Web application visualizing different sorting algorithms.
-
-Built using vanilla Javascript, HTML ans CSS with SASS preprocessor. 
+# OFF Museum
+Website made for imaginary modern art museum built with CSS3 with SASS preprocessor, HTML5 and a bit of JQuery.
