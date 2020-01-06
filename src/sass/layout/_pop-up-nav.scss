@@ -1,157 +1,224 @@
-.pop-up-nav__icon {
-
-    position: fixed;
-    left: 85%;
-    top: 5%;
-    z-index: 999;
-
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-
-    animation: fadeInOp 0.3s;
-
-    background-color: $color-primary;
-    transition: all 0.2s;
-    cursor: pointer;
-
-    opacity: 0.75;
-
-    .rect {
-        position: absolute;
-        width: 59%;
-        height: 4px;
-        background-color: $color-white;
-        opacity: 1;
-        transition: all 0.2s;
-
-        &:nth-child(1) {
-
-            top: 29%;
-            left: 21.5%;
-        }
-        &:nth-child(2) {
-            top: 47%;
-            left: 21.5%;
-        }
-        &:nth-child(3) {
-            top: 66%;
-            left: 21.5%;
-        }
-
-        
-    }
-
-    &:hover {
-        opacity: 1;
-    }
-
-    &--active {
-        .rect {
-            position: absolute;
-            width: 59%;
-            height: 4px;
-            background-color: $color-white;
-            opacity: 1;
-            transition: all 0.2s;;
-            &:nth-child(1) {
-                top: 47%;
-                left: 20%;
-                transform: rotate(45deg);
-            }
-            &:nth-child(2) {
-                opacity: 0;
-            }
-            &:nth-child(3) {
-                top: 47%;
-                left: 20%;
-                transform: rotate(-45deg);
-            }
-            
-        }
-    }
-    @include respond(tab-port) {
+.pop-up-nav {
+    &__icon     {
+        position: fixed;
         left: 85%;
-        top: 2.5rem; 
-    }
+        top: 5%;
+        z-index: 999;
+    
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
 
-    @include respond(phone) {
-        left: 80%;
-        top: 3rem;
-        animation: fadeInOp 0.3s 0.9s;
-        animation-fill-mode: backwards;
-        width: 5rem;
-        height: 5rem;
+        text-align: center;
+    
+        animation: fadeInOp 0.3s;
+    
+        background-color: $color-primary;
+        transition: all 0.2s;
+        cursor: pointer;
+    
+        opacity: 0.75;
 
-        .rect {
-            height: 3px;
-            &:nth-child(1) {
-                top: 29%;
-                left: 20%;
-            }
-            &:nth-child(2) {
-                top: 47%;
-                left: 20%;
-            }
-            &:nth-child(3) {
-                top: 66%;
-                left: 20%;
-            }
+        &:hover {
+            opacity: 1;
         }
+    
+        .rect {
+            position: relative;
+            width: 60%;
+            margin-top: 3.4rem;
 
-        &--active {
-            .rect {
-                position: absolute;
-                width: 59%;
+            &,
+            &::before,
+            &::after {
+                display: inline-block;
                 height: 3px;
                 background-color: $color-white;
-                opacity: 1;
-                transition: all 0.2s;;
-                &:nth-child(1) {
-                    top: 47%;
-                    left: 20%;
+                transition: all 0.2s;
+            }
+
+            &::before,
+            &::after {
+                content: " ";
+                position: absolute;
+                left: 0;
+                width: 100%;
+            }
+
+            &::before {
+                top: -1.2rem;
+            }
+            &::after {
+                top: 1.2rem;
+            }
+
+            @include respond (tab-land) {
+                &,
+                &::before,
+                &::after {
+                    height: 3px;
+                }
+                &::before {
+                    top: -1.1rem;
+                }
+                &::after {
+                    top: 1.1rem;
+                }
+            }
+        }
+        
+        &--active {
+            .rect {
+
+                background-color: transparent;
+
+                &::before {
+                    top: 0;
                     transform: rotate(45deg);
+                    opacity: 1;
                 }
-                &:nth-child(2) {
-                    opacity: 0;
-                }
-                &:nth-child(3) {
-                    top: 47%;
-                    left: 20%;
+
+                &::after {
+                    top: 0;
                     transform: rotate(-45deg);
+                    opacity: 1;
                 }
-                
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 9rem;
+            height: 9rem;
+            left: 82%;
+
+            .rect {
+                margin-top: 4.4rem;
+                &::before {
+                    top: -1.5rem;
+                }
+                &::after {
+                    top: 1.5rem;
+                }
+            }
+
+            &--active {
+                .rect {
+                    &::before {
+                        top: 0;
+                    }
+                    &::after {
+                        top: 0;
+                    }
+                }
+            }
+        }
+
+        @include respond(phone) {
+            left: 80%;
+        }
+
+        @include respond(small-phone) {
+            width: 7rem;
+            height: 7rem;
+            left: 75%;
+            top: 4rem;
+
+            .rect {
+                margin-top: 3.4rem;
+                &::before {
+                    top: -1rem;
+                }
+                &::after {
+                    top: 1rem;
+                }
+            }
+
+            &--active {
+                .rect {
+                    &::before {
+                        top: 0;
+                    }
+                    &::after {
+                        top: 0;
+                    }
+                }
+            }
+        }
+        
+        @include respond(small-phone-land) {
+            width: 6rem;
+            height: 6rem;
+            left: 75%;
+            top: 4rem;
+
+            .rect {
+                margin-top: 2.8rem;
+                &::before {
+                    top: -1rem;
+                }
+                &::after {
+                    top: 1rem;
+                }
+            }
+
+            &--active {
+                .rect {
+                    &::before {
+                        top: 0;
+                    }
+                    &::after {
+                        top: 0;
+                    }
+                }
             }
         }
     }
-}
+    
 
-.pop-up-nav__cover {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 900;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all 0.3s;
-    animation: fadeIn 0.3s;
-    animation-fill-mode: forwards;
-}
+    &__cover {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 900;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.3s;
+        animation: fadeIn 0.3s;
+        animation-fill-mode: forwards;
+    }
 
-.pop-up-nav__links {
-    display: inherit;
-    width: 35rem;
-    height: 50rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    //border: 1px solid $color-white;
-    text-align: center;
-    a {
+    &__links {
+        list-style: none;
+        display: inherit;
+        width: 35rem;
+        height: 50rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        //border: 1px solid $color-white;
+        text-align: center;
+
+        @include respond(phone) {
+            top: 58%;
+        }
+    
+        @include respond (tab-port) {
+            top: 55%;
+
+        }
+    
+        @include respond(small-phone-land) {
+            height: 42rem;
+            top: 60%;
+
+        }
+    }
+
+    &__link {
         display: block;
         background-color: $color-white;
         color: $color-grey;
@@ -170,27 +237,26 @@
             color: $color-white;
             transform: scale(1.05);
         }
-    }
 
-    @include respond(phone) {
-        top: 58%;
-    }
-
-    @include respond(small-phone-land) {
-        height: 40rem;
-        a {
-            padding: 1rem 1rem;
+        @include respond (tab-port) {
+                padding: 1.5rem 2rem;
+                font-size: 2.4rem;
+        }
+    
+        @include respond(small-phone-land) {
+                padding: 1rem 1rem;
+                font-size: 2.1rem;
         }
     }
-}
 
-.pop-up-nav__logo {
-    display: block;
-    background-image: linear-gradient(to right bottom, rgba($color-primary, 1), rgba($color-primary, 0.7));
-    padding: 2rem 1rem;
-    color: white;
-    font-weight: 700;
-    font-size: 2.6rem;
-    letter-spacing: 2px;
+    &__logo {
+        display: block;
+        background-image: linear-gradient(to right bottom, rgba($color-primary, 1), rgba($color-primary, 0.7));
+        padding: 2rem 1rem;
+        color: white;
+        font-weight: 700;
+        font-size: 2.6rem;
+        letter-spacing: 2px;
 
+    }
 }

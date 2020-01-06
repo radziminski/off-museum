@@ -9,9 +9,19 @@
     margin: 0;
     letter-spacing: 3px;
 
+    @include respond(tab-port) { 
+        margin-top: 4rem;
+        font-size: 4rem;
+    }
+
     @include respond (phone) {
-        font-size: 2.8rem;
+        font-size: 3rem;
         letter-spacing: 2.5px;
+        margin-top: 2rem;
+    }
+
+    @include respond(small-phone-land) {
+        margin-top: 0.8rem;
     }
     
 }

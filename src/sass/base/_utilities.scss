@@ -34,3 +34,9 @@
 .u-padding-left-small {
     padding-left: 5rem;
 }
+
+.u-fade-in-bottom {
+    animation: moveInBottom 0.8s ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: 0.4s;
+}

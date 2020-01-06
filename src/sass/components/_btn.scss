@@ -66,21 +66,22 @@
             transform: translateY(-0.15rem);
         }
     }
-    
-    @include respond(tab-land) {
-        &--ghost {
-            font-size: 1.8rem;
-        }
-    }
+
 
     @include respond(tab-land) {
         margin-bottom: 2rem;
         padding: 0.5rem 0.9rem;
         &--ghost {
-            font-size: 1.6rem;
-            margin-right: 1.6rem;
+            &,
+            &:link,
+            &:active {
+                font-size: 1.6rem;
+                margin-right: 1.6rem;
+            }
         }
     } 
+
+    
 }
 
 .btn-text {

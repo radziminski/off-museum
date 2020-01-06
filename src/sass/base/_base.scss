@@ -20,6 +20,14 @@ html {
     }
 
     @include respond(tab-port) {
+        font-size: 53%;
+    }
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
+
+    @include respond(small-phone-land) {
         font-size: 50%;
     }
 

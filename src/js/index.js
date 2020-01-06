@@ -1,8 +1,10 @@
+// Webpack imports
 import "../sass/main.scss";
 
+// JS imports
 import $ from 'jquery';
 
-
+// DOM Elements used later
 const elements = {
     body: $('body'),
     header: $('.header'),
@@ -22,12 +24,10 @@ const elements = {
     review3: $('.js--review-3'),
 }
 
+// Function handling FOUC
 document.onreadystatechange = function() { 
     if (document.readyState === "complete") {
-        elements.headingPrimaryMain.addClass('animateLeft');
-        elements.headingPrimaryMain.css('opacity', 1);
-        elements.headingPrimarySub.addClass('animateRight');
-        elements.headingPrimarySub.css('opacity', 1);
+
         elements.btnAnimation.addClass('animateBottom');
         elements.btnAnimation.css('opacity', 1);
         elements.loader.css('opacity', 0);
