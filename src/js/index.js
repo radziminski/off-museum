@@ -4,6 +4,7 @@ import "../sass/main.scss";
 // JS imports
 import $ from 'jquery';
 
+// === Constants ===
 // DOM Elements used later
 const elements = {
     body: $('body'),
@@ -24,13 +25,17 @@ const elements = {
     review3: $('.js--review-3'),
 }
 
+const colors = {
+    primary: '#BF045B', 
+}
+
 // Function handling FOUC
 document.onreadystatechange = function() { 
     if (document.readyState === "complete") {
 
         elements.btnAnimation.addClass('animateBottom');
         elements.btnAnimation.css('opacity', 1);
-        elements.loader.css('opacity', 0);
+        elements.loader.css('display', 'none');
         elements.hideWrapper.css('visibility', 'visible');
         elements.hideWrapper.css('opacity', '1');
     }
@@ -52,16 +57,13 @@ elements.popUpNavIcon.on('click', () => {
     elements.popUpNavIcon.toggleClass('pop-up-nav__icon--active');
     if (elements.popUpNavCover.css('opacity') > 0) {
         elements.popUpNavCover.css({'display': 'none', 'opacity' : 0});
-
     } else {
         elements.popUpNavCover.css({'display': 'block', 'opacity' : 1});
-
     };
 });
 
 elements.popUpNavCover.on('click', () => {
     elements.popUpNavCover.css({'display': 'none', 'opacity' : 0});
-
     elements.popUpNavIcon.toggleClass('pop-up-nav__icon--active');
 });
 
@@ -128,7 +130,7 @@ if (window.innerWidth >= 900) {
     window.addEventListener("scroll",() => { 
         scrollAmount = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
         if (scrollAmount > 200) {
-            elements.popUpNavIcon.css({'background-color': '#BF045B'});
+            elements.popUpNavIcon.css({'background-color': colors.primary});
         } else {
             elements.popUpNavIcon.css({'background-color': 'transparent'});
         }
@@ -143,54 +145,6 @@ window.addEventListener('resize', () => {
     } else {
         elements.popUpNavIcon.css({'display': 'block'});
         if (scrollAmount < 200) elements.popUpNavIcon.css({'background-color': 'transparent'});
-        else elements.popUpNavIcon.css({'background-color': '#BF045B'});
+        else elements.popUpNavIcon.css({'background-color': colors.primary});
     }
 })
-
-// Old Code displaying loader until the bacground image is loaded:
-// const src = $('header').css('background-image');
-// // Getting only url, (whole bg has also linear gradient)
-// let urlSrc = src.slice(56, src.length);
-// const url = urlSrc.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
-
-// const img = new Image();
-// const startTime = new Date();
-// let DOMLoadFlag = false;
-// let imageLoadFlag = false;
-// img.src = url;
-
-// If both image and site is ready to show:
-// img.onload = function() {
-//     console.log('Loaded')
-//     const endTime = new Date();
-//     const loadTime = endTime - startTime;
-//     if (loadTime < 600) {
-//         elements.hideWrapper.css('visibility', 'none');
-//         elements.loader.css('transition', 'none');
-//     }
-
-//     elements.headingPrimaryMain.addClass('animateLeft');
-//     elements.headingPrimaryMain.css('opacity', 1);
-//     elements.headingPrimarySub.addClass('animateRight');
-//     elements.headingPrimarySub.css('opacity', 1);
-//     elements.btnAnimation.addClass('animateBottom');
-//     elements.btnAnimation.css('opacity', 1);
-//     elements.hidden.css('opacity', 1);
-//     elements.loader.css('opacity', 0);
-//     elements.hideWrapper.css('visibility', 'visible');
-//     elements.hideWrapper.css('opacity', '1');
-
-// }
-
-
-// window.addEventListener('DOMContentLoaded', (event) => {
-//     DOMLoadFlag = true;
-// });
-
-// if (img.complete && DOMLoadFlag) {
-//     console.log('loaded')
-//     img.onload();
-//     setTimeout(() => {
-//         $('.loader-box').css('display', 'none');
-//     }, 50);
-// }
