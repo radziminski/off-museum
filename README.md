@@ -15,7 +15,7 @@ To run application use
 npm start
 ```
 or go to [OFF-museum website](https://radziminski.github.io/off-museum)
-#### Website Layout:
+#### Header Layout:
 ![layout](https://i.ibb.co/PWqFnG0/header-off-museum.png)
 
 ## Built With
